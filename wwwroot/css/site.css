@@ -1,0 +1,235 @@
+﻿/*html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+    font-size: 16px;
+    text-decoration: none;
+}*/
+
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Jost',sans-serif;
+    font-size: 17px;
+    text-decoration: none;
+    /*background-image: url('../images/pizzaBackground.jpg');*/
+}
+
+.navbar2{
+    display: flex;
+    justify-content: center;
+    align-items:center;    
+    position: relative;
+}
+.mainParent{
+    display:flex
+}
+
+.parent{
+    display: flex;
+}
+
+
+.container2{
+    padding-left: 8%;
+    width: 70%;
+}
+.main-button {
+    background-color: #c9ffff;
+    padding: 10px 24px;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0 2px 18px #f5f5f5;
+}
+
+.form1 {
+    margin-top: 24px;
+}
+
+header {
+    height: 100px;
+    padding-left: 8%;
+    padding-right: 8%;
+    background-color: rgb(201, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+ header .logo{
+        font-size: 30px;
+        font-weight: 700;
+        letter-spacing: 1px;
+
+ }
+ header .btn{
+        font-size: 25px;
+        cursor: pointer;
+        display: none;
+    }
+
+
+
+header a{
+        margin: 0 0.5rem;
+        font-weight: 500;
+    }
+
+header a:focus {
+    color: blue;
+    font-weight: bold;
+}
+
+a:hover, .active {
+    color: lightgreen;
+    transition: 0.7s;
+}
+
+.form2 {
+    background-color: rgb(201, 255, 255);
+    border: none;
+    margin: 0 0.5rem;
+    padding:0;
+    font-weight: 500;
+}
+
+
+@media(max-width:739px) {
+    header .btn{
+        display: block;
+    }
+
+    header .navbar2{
+        flex-direction: column;
+        position: fixed;
+        min-width: 300px;
+        height: 100vh;
+        background-color: #c9ffff;
+        top: 0;
+        right: -100%;
+        align-items: flex-start;
+        justify-content: start;
+        padding-top: 4rem;
+        transition: all 0.7s;
+    }
+
+        header .menu-active{
+            right: 0%;
+        }
+
+        header .navbar2 a:hover, .active{
+            color: lightgreen;
+            transition: 0.4s;
+        }
+
+
+        header .navbar2 .close-btn {
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin: 25px;
+        }
+
+    header .logo {
+        font-size: 25px;
+        font-weight: 500;
+    }
+}
+
+.size {
+    display: block;
+}
+
+.pizza-input {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 8px;
+    margin-right: 50px;
+}
+
+    .pizza-input label {
+        margin-bottom: 4px;
+    }
+
+    .pizza-input input {
+        padding: 10px 24px;
+        background-color: #f5f5f5;
+        border: none;
+        outline: none;
+        border-radius: 4px;
+    }
+
+.pizza-input input:focus {
+            box-shadow: 0 2px 18px #f5f5f5;
+        }
+
+.toppings {
+    display: flex;
+}
+
+img.pizza1 {
+    flex: 50%;
+    margin-block: 20px;
+}
+
+img.pizza3 {
+    flex: 1;
+    margin-block: 20px;
+}
+
+img.pizza4 {
+    flex: 1;
+    margin-top:30px;
+}
+
+img.pizza6 {
+    flex: 1;
+    margin-top: 30px;
+}
+
+.basicToppings {
+    flex: 1;
+}
+
+.deluxeToppings {
+    flex: 1;
+}
+
+img.pizzaimage {
+    display: flex;
+    margin-top: 10px;
+    margin-left:20px;
+    width: 20%;
+}
+
+.toppings-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.basicToppings, .deluxeToppings {
+    display: flex;
+    flex-direction: column;
+}
+
+.toppings-input {
+    display: flex;
+}
+
+
+
+ .toppings-input label {
+    margin-left: 8px;
+    }
+
+.toppings-container {
+    display: block;
+}
+
+.text-center{
+    margin-bottom:28px;
+}

@@ -1,0 +1,77 @@
+﻿@inject SignInManager<IdentityUser> SignInManager
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+    <title>@ViewData["Title"] - NewPizzaPalace</title>
+
+    @*Jost font family*@
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-YUnXAyxoNuF/iNpiS+GoHd1vJoMoF/85QZ45s8lKjYnNN83c1Mpi2tPKgz9tFfl0tll/bKjZgolPZ13NEHdCw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="~/css/site.css" />
+
+
+</head>
+<body>
+    <header>
+        <a class="logo" asp-area="" asp-controller="Account" asp-action="Register">Pizza Palace</a>
+        <nav class="navbar2">
+
+            <div class="btn">
+                <i class="fas fa-times close-btn"></i>
+            </div>
+            <a asp-area="" asp-controller="Account" asp-action="Register">Home</a>
+            <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+
+
+
+            @if (SignInManager.IsSignedIn(User))
+            {
+
+                <form  method="post" asp-controller="Account" asp-action="Logout">
+                    <button type="submit" style="width:auto" class="form2">
+                        Logout @User.Identity.Name
+                    </button>
+                </form>
+
+            }
+            else
+            {
+                <a asp-controller="Account" asp-action="Register">Register </a>
+                <a asp-controller="Account" asp-action="Login">Login</a>
+            }
+
+        </nav>
+        <div class="btn">
+            <i class="fas fa-bars menu-btn"></i>
+        </div>
+    </header>
+
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2023 - NewPizzaPalace - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

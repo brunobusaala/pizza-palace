@@ -1,0 +1,95 @@
+﻿@*@model OrderViewModel
+
+    <h1>Order Summary</h1>
+
+    <div>
+        <h2>Small Pizza</h2>
+        <p>Quantity: @Model.Small</p>
+        <p>Price: @ViewBag.PriceOfSmall</p>
+    </div>
+
+    <div>
+        <h2>Medium Pizza</h2>
+        <p>Quantity: @Model.Medium</p>
+        <p>Price: @ViewBag.PriceOfMedium</p>
+    </div>
+
+    <div>
+        <h2>Large Pizza</h2>
+        <p>Quantity: @Model.Large</p>
+        <p>Price: @ViewBag.PriceOfLarge</p>
+    </div>
+
+    <div>
+        <h2>Total Price</h2>
+        <p>@(ViewBag.PriceOfSmall + ViewBag.PriceOfMedium + ViewBag.PriceOfLarge)</p>
+    </div>*@
+@model OrderSummaryViewModel
+
+<h2>Order Summary</h2>
+
+<h5>You have bought:</h5>
+<ul>
+    @if (Model.SmallPizza > 0)
+    {
+        <li>
+            <b>@Model.SmallPizza  Small Sized Pizza</b>
+        </li>
+    }
+    @if (Model.MediumPizza > 0)
+    {
+        <li>
+            <b>@Model.MediumPizza  Medium Sized Pizza</b>
+        </li>
+    }
+    @if (Model.LargePizza > 0)
+    {
+        <li>
+            <b>@Model.LargePizza  Large Sized Pizza</b> 
+        </li>
+    }
+</ul>
+
+ <h5>Added Toppings:</h5>
+<ol>
+    @foreach (var topping in Model.Toppings)
+    {
+        <li><b>@topping</b></li>
+    }
+
+    @foreach (var deluxe in Model.DeluxeT)
+    {
+        <li><b>@deluxe</b></li>
+    }
+</ol>
+<h5>
+    Price based on the Pizza Size and Topping:
+</h5>
+
+<ol>
+    @if (@Model.SmallP > 0)
+    {
+        <li>
+            The Total  cost for Small Sized pizza is:<b>$@Model.SmallP</b>
+        </li>
+    }
+    @if (@Model.MediumP > 0)
+    {
+        <li>
+            The Total  cost for Medium Sized pizza is:<b>$@Model.MediumP</b>
+        </li>
+    }
+    @if (@Model.LargeP > 0)
+    {
+        <li>
+            The Total  cost for Large Sized pizza is:<b>$@Model.LargeP</b>
+        </li>
+    }
+</ol>
+
+
+
+
+<p>SubTotal:<b> $@Model.SubTotal</b></p>
+<p>GST:<b>$@Model.GST</b> </p>
+<p>Total: <b>$@Model.Total</b></p>

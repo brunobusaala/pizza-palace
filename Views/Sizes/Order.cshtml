@@ -1,0 +1,203 @@
+﻿@model OrderViewModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="mainParent">
+    <div class="parent">
+        <div class="container2">
+            <div class="form1">
+                <form method="post">
+                    <div asp-validation-summary="All" class="text-danger"></div>
+                    <div class="pizza-input">
+                        <label asp-for="Small">Small Pizza:</label>
+                        <input asp-for="Small" value=0 />
+                        <span asp-validation-for="Small" class="text-danger"></span>
+                    </div>
+                    @*<div class="pizza-input">
+                        <label for="medium">Medium Pizza:</label>
+                        <input type="text" name="Size" id="medium" maxlength="2">
+                    </div>*@
+                    <div class="pizza-input">
+                        <label asp-for="Medium">Medium Pizza:</label>
+                        <input asp-for="Medium" value=0 />
+                        <span asp-validation-for="Medium" class="text-danger"></span>
+                    </div>
+                    <div class="pizza-input">
+                        <label asp-for="Large">Large Pizza:</label>
+                        <input asp-for="Large" value=0 />
+                        <span asp-validation-for="Large" class="text-danger"></span>
+                    </div>
+
+
+
+
+
+                    <h3 class="text-center">Select  Toppings</h3>
+
+
+
+                    @*<h1>User Registration</h1>
+
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <form method="post">
+                                <div asp-validation-summary="All" class="text-danger"></div>
+                                <div class="form-group">
+                                    <label asp-for="Email"></label>
+                                    <input asp-for="Email" class="form-control" />
+                                    <span asp-validation-for="Email" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Password"></label>
+                                    <input asp-for="Password" class="form-control" />
+                                    <span asp-validation-for="Password" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="ConfirmPassword"></label>
+                                    <input asp-for="ConfirmPassword" class="form-control" />
+                                    <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Register</button>
+                            </form>
+                        </div>
+                    </div>*@
+
+
+
+
+
+
+                    @*<div class="pizza-input">
+                        <label for="large">Large Pizza: </label>
+                        <input type="text" name="Size" id="large" maxlength="2" size="2">
+                    </div>*@
+                    @*<input type="submit" value="Submit" class="main-button btnSubmit" />*@
+
+                    <div class="toppings-container">
+                        <div class="toppings">
+                            <div class="basicToppings">
+                                <h3>Basic Toppings</h3>
+                                @*<div class="toppings-input">
+                                    <input type="checkbox" name="cheese" id="cheese">
+                                    <label for="cheese">Cheese</label>
+                                </div>*@
+
+                                <div class="form-group">
+                                    <div class="checkbox">
+                                        <input asp-for="Cheese" />
+                                        <label asp-for="Cheese">
+                                            Cheese
+                                        </label>
+                                    </div>
+
+                                </div>
+                                <div class="form-group">
+                                    <div class="checkbox">
+                                        <input asp-for="Pepperoni" />
+                                        <label asp-for="Pepperoni">
+                                            Pepperoni
+                                        </label>
+                                    </div>
+
+                                </div>
+                                <div class="form-group">
+                                    <div class="checkbox">
+                                        <input asp-for="Ham" />
+                                        <label asp-for="Ham">
+                                            Ham
+                                        </label>
+                                    </div>
+
+                                </div>
+                                <div class="form-group">
+                                    <div class="checkbox">
+                                        <input asp-for="Pineapple" />
+                                        <label asp-for="Pineapple">
+                                            Pineapple
+                                        </label>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="deluxeToppings">
+                                <h3>Deluxe Toppings</h3>
+
+
+                                <div class="form-group">
+                                    <div class="checkbox">
+                                        <input asp-for="Sausage" />
+                                        <label asp-for="Sausage">
+                                            Sausage
+                                        </label>
+                                    </div>
+
+                                </div>
+                                <div class="form-group">
+                                    <div class="checkbox">
+                                        <input asp-for="FetaCheese" />
+                                        <label asp-for="FetaCheese">
+                                            @Html.DisplayNameFor(m => m.FetaCheese)
+                                        </label>
+                                    </div>
+
+                                </div>
+                                <div class="form-group">
+                                    <div class="checkbox">
+                                        <input asp-for="Tomatoes" />
+                                        <label asp-for="Tomatoes">
+                                            Tomatoes
+                                        </label>
+                                    </div>
+
+                                </div>
+                                <div class="form-group">
+                                    <div class="checkbox">
+                                        <input asp-for="Olives" />
+                                        <label asp-for="Olives">
+                                            Olives
+                                        </label>
+                                    </div>
+
+                                </div>
+
+
+
+
+
+                            </div>
+
+                        </div>
+                        <button type="submit" class="btn btn-primary">Place Order</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="pizzaimage">
+            <img src="~/images/pizza1.jpg" alt=" Some of our pizzas" width="200"
+                 height="200" class="pizza1">
+            <img src="~/images/pizza3.jpg" alt=" Some of our pizzas" width="200"
+                 height="200" class="pizza3">
+            <img src="~/images/pizza4.jpg" alt=" Some of our pizzas" width="250"
+                 height="250" class="pizza4">
+            <img src="~/images/pizza6.jpg" alt=" Some of our pizzas" width="250"
+                 height="250" class="pizza6">
+
+        </div>
+
+    </div>
+
+
+
+</div>
+
+
+
+
+
+
+@*@Html.DisplayNameFor(m => m.RememberMe)*@
+
