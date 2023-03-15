@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ad1eTwZ0qJ8y5wxc6OaZu1KxxCjYSReSt/E1GZQqsy6TpRQw63kRBTY9R4Cy3XzF8PIUyurSXxbQbSNUGYyMfQ==",
+  "dgSpecHash": "9kg/0XFHxvtOR40BASHxa8I70OBE5fPTLzQpJybAKhAezQrhJ7AbtMk8Ntj6lpAgGnBzzyPDiCtC+m1zO/4vhw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\bruno\\Desktop\\C#Projects\\NewPizzaPalace\\NewPizzaPalace.csproj",
+  "projectFilePath": "C:\\Users\\bruno\\Desktop\\ML\\pizzadir\\pizza-palace\\NewPizzaPalace.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\bruno\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\bruno\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.17\\microsoft.aspnetcore.cryptography.internal.5.0.17.nupkg.sha512",
